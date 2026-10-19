@@ -1,0 +1,33 @@
+name: Build Intel Mac loaders
+
+on:
+  push:
+    paths:
+      - 'loader/*.c'
+      - '.github/workflows/build-intel-loaders.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-13  # Intel runner
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install libusb
+        run: brew install libusb
+
+      - name: Build loaders for x86_64
+        run: |
+          cd loader
+          for src in pongo-bootr pongo-linux pongo-shell; do
+            clang -arch x86_64 -O2 -I$(brew --prefix libusb)/include \
+              "$src.c" -o "$src-intel" \
+              -L$(brew --prefix libusb)/lib -lusb-1.0
+          done
+          file pongo-*-intel
+
+      - name: Upload Intel loaders
+        uses: actions/upload-artifact@v4
+        with:
+          name: pongo-loaders-intel
+          path: loader/pongo-*-intel
