@@ -1,0 +1,10 @@
+Package: com.idroidik.setup
+Name: iDroidik Setup
+Version: 1.0
+Architecture: iphoneos-arm
+Description: On-device setup for iDroidik (Android 16 on iPhone 7). Creates the Android APFS volume, downloads the Android image, generates firmware from your own iOS, and provisions persistent storage. Requires iPhone 7 on iOS 15.
+Maintainer: iDroidik
+Author: iDroidik
+Section: Utilities
+Depends: firmware (>= 0.1)
+Priority: optional
