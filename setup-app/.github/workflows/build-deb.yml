@@ -1,0 +1,58 @@
+name: Build iDroidik Setup .deb
+
+on:
+  push:
+    paths:
+      - 'setup-app/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: setup-app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Archive (unsigned)
+        run: |
+          xcodebuild \
+            -project iDroidikSetup.xcodeproj \
+            -scheme iDroidikSetup \
+            -configuration Release \
+            -archivePath "$PWD/build/iDroidikSetup.xcarchive" \
+            archive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Assemble .deb
+        run: |
+          APP_PATH="build/iDroidikSetup.xcarchive/Products/Applications/iDroidikSetup.app"
+          if [ ! -d "$APP_PATH" ]; then
+            echo "ERROR: .app not found at $APP_PATH"
+            find build -maxdepth 4 -type d | head -20
+            exit 1
+          fi
+          PKGDIR="$PWD/pkgroot"
+          rm -rf "$PKGDIR"
+          mkdir -p "$PKGDIR/DEBIAN" "$PKGDIR/Applications"
+          cp debian/DEBIAN/control debian/DEBIAN/postinst "$PKGDIR/DEBIAN/"
+          chmod 755 "$PKGDIR/DEBIAN/postinst"
+          cp -R "$APP_PATH" "$PKGDIR/Applications/"
+          # dpkg-deb is available on macos runners via Homebrew's dpkg
+          brew install dpkg 2>/dev/null || true
+          dpkg-deb -b "$PKGDIR" "com.idroidik.setup_1.0_iphoneos-arm.deb"
+          ls -lh com.idroidik.setup_1.0_iphoneos-arm.deb
+
+      - name: Upload .deb artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: idroidik-setup-deb
+          path: setup-app/com.idroidik.setup_1.0_iphoneos-arm.deb
+          if-no-files-found: error
