@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD5A6D7F576487675892918E /* iDroidikSetupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF400C330E63D21521727E9D /* iDroidikSetupApp.swift */; };
+		43F98F14ECDA705137EB5AF3 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04677C2F31A4A3F5186EA1C3 /* Shell.swift */; };
+		62EAC8FE4EC4A527EDB3415B /* SetupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1E53738B19A1FE1D3DFD0 /* SetupState.swift */; };
+		0D7CC0B0064AF34F42C37F99 /* SetupEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CA19140AF30DF35884314 /* SetupEngine.swift */; };
+		5084B6FA1AABE5D0FE389AE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F4DED0F19659BB4742AAC9 /* ContentView.swift */; };
+		71AC46EBAC87AFCC46ACC483 /* StepViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9324E93722A130D3E7610 /* StepViews.swift */; };
+		B09FA1D107EDD9357D618EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EE75D0D4F64BDD3BA2065 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF400C330E63D21521727E9D /* iDroidikSetupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iDroidikSetupApp.swift"; sourceTree = "<group>"; };
+		04677C2F31A4A3F5186EA1C3 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shell.swift"; sourceTree = "<group>"; };
+		BFE1E53738B19A1FE1D3DFD0 /* SetupState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupState.swift"; sourceTree = "<group>"; };
+		638CA19140AF30DF35884314 /* SetupEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupEngine.swift"; sourceTree = "<group>"; };
+		19F4DED0F19659BB4742AAC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		D4E9324E93722A130D3E7610 /* StepViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StepViews.swift"; sourceTree = "<group>"; };
+		CE971CB537165B5A41B6623C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042EE75D0D4F64BDD3BA2065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2201F6926F93AAFE9D8205FE /* iDroidikSetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDroidikSetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE1439ACCFCEB73E6F9981A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C4FDD7B635240BD562EBB49 = {
+			isa = PBXGroup;
+			children = (
+				1CA3516AEA6728D23927B483 /* iDroidikSetup */,
+				B23D89B2D2DF3745A003AEB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CA3516AEA6728D23927B483 /* iDroidikSetup */ = {
+			isa = PBXGroup;
+			children = (
+				DF400C330E63D21521727E9D /* iDroidikSetupApp.swift */,
+				15201380258A502EBAFAB45F /* Core */,
+				7DB4F0690289E18EF0B4212D /* Views */,
+				CE971CB537165B5A41B6623C /* Info.plist */,
+				042EE75D0D4F64BDD3BA2065 /* Assets.xcassets */,
+			);
+			path = iDroidikSetup;
+			sourceTree = "<group>";
+		};
+		15201380258A502EBAFAB45F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04677C2F31A4A3F5186EA1C3 /* Shell.swift */,
+				BFE1E53738B19A1FE1D3DFD0 /* SetupState.swift */,
+				638CA19140AF30DF35884314 /* SetupEngine.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7DB4F0690289E18EF0B4212D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19F4DED0F19659BB4742AAC9 /* ContentView.swift */,
+				D4E9324E93722A130D3E7610 /* StepViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B23D89B2D2DF3745A003AEB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2201F6926F93AAFE9D8205FE /* iDroidikSetup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42AEFBAE01D2DFD981F7DA7D /* iDroidikSetup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C875FD1C5C02E06FAC0545 /* Build configuration list for PBXNativeTarget "iDroidikSetup" */;
+			buildPhases = (
+				DE1439ACCFCEB73E6F9981A5 /* Frameworks */,
+				3519654520012F56AC9A0E86 /* Resources */,
+				3B7DFB0747829707F437ED7F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDroidikSetup;
+			productName = iDroidikSetup;
+			productReference = 2201F6926F93AAFE9D8205FE /* iDroidikSetup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F86FAA6BBF9AC94A7E4595 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F5B26284A0FB8BAD44DF0FFB /* Build configuration list for PBXProject "iDroidikSetup" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C4FDD7B635240BD562EBB49;
+			productRefGroup = B23D89B2D2DF3745A003AEB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42AEFBAE01D2DFD981F7DA7D /* iDroidikSetup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3519654520012F56AC9A0E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09FA1D107EDD9357D618EDC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B7DFB0747829707F437ED7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5A6D7F576487675892918E /* iDroidikSetupApp.swift in Sources */,
+				43F98F14ECDA705137EB5AF3 /* Shell.swift in Sources */,
+				62EAC8FE4EC4A527EDB3415B /* SetupState.swift in Sources */,
+				0D7CC0B0064AF34F42C37F99 /* SetupEngine.swift in Sources */,
+				5084B6FA1AABE5D0FE389AE6 /* ContentView.swift in Sources */,
+				71AC46EBAC87AFCC46ACC483 /* StepViews.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F76147CE86058CC1939088C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		97C89C522DCD700C1F32C445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1A9E10FAAD0A97FB97BCEC18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iDroidikSetup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idroidik.setup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+			};
+			name = Debug;
+		};
+		B79C83306C8ABF7373B5E45C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iDroidikSetup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.idroidik.setup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5B26284A0FB8BAD44DF0FFB /* Build configuration list for PBXProject "iDroidikSetup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F76147CE86058CC1939088C9 /* Debug */,
+				97C89C522DCD700C1F32C445 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C875FD1C5C02E06FAC0545 /* Build configuration list for PBXNativeTarget "iDroidikSetup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9E10FAAD0A97FB97BCEC18 /* Debug */,
+				B79C83306C8ABF7373B5E45C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
+}
