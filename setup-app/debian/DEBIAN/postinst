@@ -1,0 +1,23 @@
+#!/bin/bash
+# iDroidik Setup postinst — runs as root during Sileo install.
+set -e
+
+APP="/Applications/iDroidikSetup.app"
+BIN="$APP/iDroidikSetup"
+
+if [ -f "$BIN" ]; then
+    # Make the binary setuid root so the app runs as root (uid 0).
+    # The app verifies getuid() == 0 on launch and refuses to run otherwise.
+    chown root:wheel "$BIN"
+    chmod 4755 "$BIN"
+    echo "iDroidik Setup: setuid root enabled on $BIN"
+else
+    echo "iDroidik Setup: WARNING — binary not found at $BIN" >&2
+fi
+
+# Refresh the icon cache so the app appears on the home screen.
+if command -v uicache >/dev/null 2>&1; then
+    uicache -p "$APP" 2>/dev/null || uicache 2>/dev/null || true
+fi
+
+exit 0
